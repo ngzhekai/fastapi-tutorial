@@ -1,0 +1,8 @@
+# Environment Variable
+.env
+
+# Byte-compile / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
