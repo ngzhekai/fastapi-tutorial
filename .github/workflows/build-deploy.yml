@@ -74,3 +74,14 @@ jobs:
     steps: 
     - name:  deploying stuff
       run: echo "goint to test deploying!"
+
+    - name: Deploy to AWS Ubuntu Server
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.PROD_HOST }}
+        username: ${{ secrets.PROD_USERNAME }}
+        password: ${{ secrets.PROD_PASSWORD }}
+        script: |
+          cd app/src
+          git pull
+          sudo systemctl restart api
