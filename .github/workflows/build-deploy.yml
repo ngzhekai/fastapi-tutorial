@@ -7,7 +7,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: pulling from git repo via Checkout
-        uses: actions/checkout@v3.5.2
-      - name: say hi to me
-        run: echo "hey zhekai"
-
+        uses: actions/checkout@v3
+      - name: Setup Python Version 3.10
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+      - name: Update pip
+        run: python -m pip install --upgrade pip
+      - name: Install all dependencies
+        run: pip install -r requirements.txt
