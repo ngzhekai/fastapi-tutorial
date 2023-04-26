@@ -4,6 +4,15 @@ on: [push, pull_request]
 
 jobs:
   job1:
+    env:
+      DATABASE_HOSTNAME: dpg-cgnr23ou9tun42tktnjg-a.singapore-postgres.render.com
+      DATABASE_PORT: 5432
+      DATABASE_PASSWORD: gBCQhs8c4EoYLbk6b57drX9WLq122Uw3
+      DATABASE_NAME: fastapi_o4z2
+      DATABASE_USERNAME: fastapi_o4z2_user
+      SECRET_KEY: 7d83df7f20fa93871a1362a94b5deb38d1a168f914670e9ffb012f4bbbde43ec
+      ALGORITHM: HS256
+      ACCESS_TOKEN_EXPIRE_MINUTES: 30
     runs-on: ubuntu-latest
     steps:
       - name: pulling from git repo via Checkout
