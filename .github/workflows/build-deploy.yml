@@ -80,6 +80,7 @@ jobs:
       - name: Deploy to AWS Ubuntu Server
         uses: appleboy/ssh-action@master
         with:
+          # ensure the host is updated correctly to the public ip assign by AWS education account, may change over time
           host: ${{ secrets.PROD_HOST }}
           username: ${{ secrets.PROD_USERNAME }}
           password: ${{ secrets.PROD_PASSWORD }}
