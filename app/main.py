@@ -32,6 +32,4 @@ app.include_router(vote.router)
 
 @app.get("/")
 def root():
-    return {"message": "Welcome to my social media backend API!
-            This is hosted on Render PaaS Platform, give it a '/docs' on the URL
-            to redirect to the Swagger UI"}
+    return {"message": "Welcome to my social media backend API! This is hosted on Render PaaS Platform, give it a '/docs' on the URL to redirect to the Swagger UI Docs."}
