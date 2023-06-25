@@ -32,4 +32,4 @@ app.include_router(vote.router)
 
 @app.get("/")
 def root():
-    return {"message": "Welcome to my API! Pushing out to Ubuntu AWS"}
+    return {"message": "Welcome to my social media backend API! This is hosted onrender cloud platform"}
